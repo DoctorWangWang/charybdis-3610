@@ -5,6 +5,9 @@
 &default_transform {
     col-offset = <6>;
 };
+&right_encoder {
+    status = "okay";
+};
 
 &kscan0 {
     diode-direction = "col2row";
