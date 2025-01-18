@@ -27,7 +27,13 @@
             bindings = <&kp ESC>, <&kp TAB>;
         };
     };
-
+behaviors {
+        rgb_encoder: rgb_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_UP>;
+        };
+    };
     macros {
         macro_phone: macro_phone {
             // 1351
@@ -86,6 +92,7 @@
                    &kp GRAVE  &kp LGUI  &kp BSPC   &kp SPACE     &none   &kp RET  &kp LBKT   &kp RBKT
                    &kp LALT   &kp LALT  &kp LCTRL  &lt 3 DELETE  &none   &none    &mo 1      &kp LALT
             >;
+ sensor-bindings = <&rgb_encoder>;
         };
 
         number_layer {
