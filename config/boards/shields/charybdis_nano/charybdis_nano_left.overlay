@@ -17,3 +17,6 @@
         , <&pro_micro 9 (GPIO_ACTIVE_HIGH)> // COL2 
     ;
 };
+&left_encoder {
+    status = "okay";
+};
