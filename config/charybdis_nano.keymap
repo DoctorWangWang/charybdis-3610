@@ -92,7 +92,7 @@ behaviors {
                    &kp GRAVE  &kp LGUI  &kp BSPC   &kp SPACE     &none   &kp RET  &kp LBKT   &kp RBKT
                    &kp LALT   &kp LALT  &kp LCTRL  &lt 3 DELETE  &none   &none    &mo 1      &kp LALT
             >;
-  sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+  sensor-bindings = <&inc_dec_kp C D &inc_dec_kp A B>;
         };
 
         number_layer {
