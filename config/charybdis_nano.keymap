@@ -18,6 +18,12 @@
 };
 
 / {
+   scroll_encoder: scroll_encoder {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+        tap-ms = <30>;
+    };
     behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
@@ -92,7 +98,7 @@ behaviors {
                    &kp GRAVE  &kp LGUI  &kp BSPC   &kp SPACE     &none   &kp RET  &kp LBKT   &kp RBKT
                    &kp LALT   &kp LALT  &kp LCTRL  &lt 3 DELETE  &none   &none    &mo 1      &kp LALT
             >;
-  sensor-bindings = <&inc_dec_kp C D &inc_dec_kp A B>;
+  sensor-bindings = <&inc_dec_kp C D &scroll_encoder>;
         };
 
         number_layer {
